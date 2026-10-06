@@ -1,0 +1,72 @@
+#pragma once
+
+#include <d3d.h>
+#include <d3d11.h>
+#include "SimpleMath.h"
+#include "GameComponent.h"
+
+class Game;
+/*
+struct Point
+{
+	DirectX::SimpleMath::Vector4 position;
+	DirectX::SimpleMath::Vector4 color;
+};
+*/
+
+class BodyComponent :
+	public GameComponent
+{
+public:
+
+	struct Point
+	{
+		DirectX::SimpleMath::Vector4 position;
+		DirectX::SimpleMath::Vector4 color;
+	};
+
+	BodyComponent(Game* game, float radius, DirectX::SimpleMath::Vector4 color);
+	~BodyComponent();
+
+	//std::vector<DirectX::XMFLOAT4> points_ = {};
+	std::vector<Point> points_ = {};
+	std::vector<int> indeces_ = {};
+
+	float radius;
+	DirectX::SimpleMath::Vector4 color;
+	DirectX::SimpleMath::Vector3 position;
+	DirectX::SimpleMath::Quaternion rotation;
+
+	DirectX::SimpleMath::Vector3 getPosition()
+	{
+		return position;
+	}
+
+	void destroyResources() override;
+	void draw() override;
+	void initialize() override;
+	void update() override;
+	void reload() override;
+
+	void generateSphereGeometry();
+
+private:
+
+	ID3D11InputLayout* layout;
+
+	ID3D11PixelShader* pixelShader;
+	ID3DBlob* pixelShaderByteCode;
+
+	ID3D11RasterizerState* rastState;
+
+	ID3D11VertexShader* vertexShader;
+	ID3DBlob* vertexShaderByteCode;
+
+	ID3D11Buffer* ib;
+	ID3D11Buffer* vb;
+	ID3D11Buffer* cb;
+
+	UINT strides[1];
+	UINT offsets[1];
+
+};

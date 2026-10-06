@@ -1,0 +1,8 @@
+﻿C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(551,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (KGRV_lab_1.vcxproj, KGRV_lab_2.vcxproj, KGRV_lab_3.vcxproj, KGRV_lab_4.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\User\source\repos\KGRV_lab_6_2\x64\Debug\SkyboxShader.cso
+  SkyboxComponent.cpp
+  KGRV_lab_1.vcxproj -> C:\Users\User\source\repos\KGRV_lab_6_2\x64\Debug\KGRV_lab_5.exe
+  "pwsh.exe" не является внутренней или внешней
+  командой, исполняемой программой или пакетным файлом.
