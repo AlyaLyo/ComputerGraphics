@@ -34,3 +34,15 @@
 # Visual Studio
 .vs/
 *.ipch
+
+# Build output
+x64/
+Debug/
+Release/
+
+# NuGet packages (restore from packages.config)
+packages/
+
+# User-specific project settings
+*.vcxproj.user
+*.suo

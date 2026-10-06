@@ -1,3 +1,0 @@
-﻿  TriangleComponent.cpp
-C:\Users\User\source\repos\KGRV_lab_1\KGRV_lab_1\TriangleComponent.cpp(147,42): warning C4267: 'argument': conversion from 'size_t' to 'UINT', possible loss of data
-  KGRV_lab_1.vcxproj -> C:\Users\User\source\repos\KGRV_lab_1\x64\Debug\KGRV_lab_1.exe
